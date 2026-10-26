@@ -12,8 +12,9 @@ echo "== docker ==";        docker --version 2>/dev/null || echo "docker not ava
 echo "== workdir ==";       pwd
 echo "== session env ==";   env | grep -E '^CLAUDE_CODE_REMOTE' | sed 's/=.*/=<set>/' || true
 echo "== EC2 metadata (should be BLOCKED on a hardened runner) =="
-if curl -s -m 2 --request PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 60" >/dev/null 2>&1; then
-  echo "REACHABLE: metadata endpoint answered (hop limit too high, or not inside a container)"
+# -f makes curl fail on HTTP errors (e.g. 403 from a proxy), so only a real token counts as "reachable".
+if TOKEN=$(curl -sf -m 2 --request PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 60" 2>/dev/null) && [ -n "$TOKEN" ]; then
+  echo "REACHABLE: metadata endpoint returned a token (hop limit too high, or not inside a container)"
 else
   echo "blocked or not on EC2 (good)"
 fi
