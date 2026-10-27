@@ -1,0 +1,44 @@
+### ./sysinfo.sh
+== hostname ==
+452be2fb3035
+== user ==
+root
+== cpu ==
+4
+== memory ==
+./sysinfo.sh: line 7: free: command not found
+== os ==
+Debian GNU/Linux 12 (bookworm)
+== claude ==
+2.1.308 (Claude Code)
+== git ==
+git version 2.39.5
+== docker ==
+docker not available
+== workdir ==
+/workspace/urszulagasiorowska-cmt/claude-runner-test
+== session env ==
+CLAUDE_CODE_REMOTE_SDK_URL=<set>
+CLAUDE_CODE_REMOTE_ENVIRONMENT_TYPE=<set>
+CLAUDE_CODE_REMOTE_SESSION_ID=<set>
+CLAUDE_CODE_REMOTE_SESSION_UUID=<set>
+CLAUDE_CODE_REMOTE=<set>
+== EC2 metadata (should be BLOCKED on a hardened runner) ==
+blocked or not on EC2 (good)
+
+### ./toolcheck.sh
+== java ==
+== gradle ==
+gradle not installed
+== node ==
+node not installed
+== docker ==
+docker not available
+== network: Datadog (public SaaS, needs allowlist in option 2) ==
+status 307 -> reachable
+== network: private Twins ALB (inside VPC, expected: blocked unless self-hosted) ==
+status 000000 -> reachable
+== where am I ==
+452be2fb3035
+4
+./toolcheck.sh: line 16: free: command not found
