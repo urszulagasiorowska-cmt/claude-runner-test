@@ -1,0 +1,46 @@
+Wed Oct 28 12:28:12 UTC 2026
+== java ==
+openjdk version "21.0.12.1" 2026-08-18
+== gradle ==
+Gradle 8.14.3
+== node ==
+v22.22.0
+== docker ==
+Docker version 29.9.2, build a82e528
+== network: Datadog (public SaaS, needs allowlist in option 2) ==
+status 307 -> reachable
+== network: private Twins ALB (inside VPC, expected: blocked unless self-hosted) ==
+status 403 -> blocked
+== where am I ==
+vm
+4
+Mem:            15Gi       475Mi        15Gi        15Mi       333Mi        15Gi
+== hostname ==
+vm
+== user ==
+root
+== cpu ==
+4
+== memory ==
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       476Mi        15Gi        15Mi       333Mi        15Gi
+== os ==
+Ubuntu 24.04.5 LTS
+== claude ==
+2.1.312 (Claude Code)
+== git ==
+git version 2.43.0
+== docker ==
+Docker version 29.9.2, build a82e528
+== workdir ==
+/home/user/claude-runner-test
+== session env ==
+CLAUDE_CODE_REMOTE_SDK_URL=<set>
+CLAUDE_CODE_REMOTE_ENVIRONMENT_TYPE=<set>
+CLAUDE_CODE_REMOTE_SESSION_ID=<set>
+CLAUDE_CODE_REMOTE_HERMETIC_MODE=<set>
+CLAUDE_CODE_REMOTE_SEND_KEEPALIVES=<set>
+CLAUDE_CODE_REMOTE=<set>
+== EC2 metadata (should be BLOCKED on a hardened runner) ==
+blocked or not on EC2 (good)
+Wed Oct 28 12:28:16 UTC 2026
